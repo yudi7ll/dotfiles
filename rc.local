@@ -1,1 +1,25 @@
-/etc/rc.local
+#!/bin/sh -e
+
+# Partition options
+# rwx = mask number 0
+# rw- = mask number 1 (not very useful for directories)
+# r-x = mask number 2
+# r-- = mask number 3
+# -wx = mask number 4 (special case: an approximation of a "write-only directory")
+# -w- = mask number 5 (not very useful for directories)
+# --x = mask number 6 (for directories: access by known filenames only)
+# --- = mask number 7 (no access)
+
+sleep 4
+
+# mount -t ntfs -o rw,nosuid,nodev,relatime,user,fmask=1133,dmask=0022 UUID=01D507B3E09CCAD0 /mnt/Documents
+# mount -t ntfs -o rw,nosuid,nodev,relatime,user,fmask=1133,dmask=0022 UUID=01D4AC0DEF48E070 /mnt/Data
+
+mount --bind /mnt/Data/Video /home/x/Videos
+mount --bind /mnt/Data/X/Documents /home/x/Documents
+mount --bind /mnt/Data/Music /home/x/Music
+mount --bind /mnt/Documents/Design/Pictures /home/x/Pictures
+mount --bind /mnt/Data/Downloads /home/x/Downloads
+mount --bind /mnt/Data/X/dev /home/x/dev
+
+exit 0

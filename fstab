@@ -1,1 +1,28 @@
-/etc/fstab
+# /dev/sda8
+UUID=3bde6949-e94d-457c-a948-76514d2751c8	/	ext4	rw,relatime,discard	0 1
+
+# /dev/sda5
+UUID=1e7aa6d5-9d05-4b35-95eb-4d0aa2093db1	/home	ext4	rw,relatime,discard	0 2
+
+# /dev/sdb Data
+UUID=01D4AC0DEF48E070					/mnt/Data	ntfs	rw,relatime,suid,dev,exec,auto,nouser,fmask=1133,dmask=0022,uid=1000	0 0
+
+# /dev/sdb Documents
+UUID=01D507B3E09CCAD0				/mnt/Documents	ntfs	rw,relatime,suid,dev,exec,auto,nouser,fmask=1133,dmask=0022,uid=1000	0 0
+
+# /dev/sda6
+# UUID=7ac6615e-6772-442a-a062-05ca954c22fd	none	swap	defaults		0 0
+
+# /tmp
+tmpfs						/tmp	tmpfs	rw,nodev,nosuid,size=2G	0 0
+
+# Partition options
+# rwx = mask number 0
+# rw- = mask number 1 (not very useful for directories)
+# r-x = mask number 2
+# r-- = mask number 3
+# -wx = mask number 4 (special case: an approximation of a "write-only directory")
+# -w- = mask number 5 (not very useful for directories)
+# --x = mask number 6 (for directories: access by known filenames only)
+# --- = mask number 7 (no access)
+

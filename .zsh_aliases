@@ -1,1 +1,12 @@
-/home/x/.zsh_aliases
+alias sudo="sudo "
+alias rm=trash
+alias pomodoro="/opt/pomodoro/bin/pomodoro"
+alias ida="/opt/idafree/ida64"
+alias s="sudo pacman -Ss"
+alias si="sudo pacman -S"
+alias cat=bat
+alias mocp="mocp -T green_theme"
+alias dmesg="dmesg --color=always"
+alias enc=encode64
+alias dec=decode64
+alias open=xdg-open
