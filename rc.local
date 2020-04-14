@@ -10,7 +10,7 @@
 # --x = mask number 6 (for directories: access by known filenames only)
 # --- = mask number 7 (no access)
 
-sleep 4
+# sleep 4
 
 # mount -t ntfs -o rw,nosuid,nodev,relatime,user,fmask=1133,dmask=0022 UUID=01D507B3E09CCAD0 /mnt/Documents
 # mount -t ntfs -o rw,nosuid,nodev,relatime,user,fmask=1133,dmask=0022 UUID=01D4AC0DEF48E070 /mnt/Data
@@ -20,6 +20,10 @@ mount --bind /mnt/Data/X/Documents /home/x/Documents
 mount --bind /mnt/Data/Music /home/x/Music
 mount --bind /mnt/Documents/Design/Pictures /home/x/Pictures
 mount --bind /mnt/Data/Downloads /home/x/Downloads
-mount --bind /mnt/Data/X/dev /home/x/dev
+
+#Extend
+mount --bind /mnt/Extend/Android /home/x/Android
+mount --bind /mnt/Extend/docker /var/lib/docker
+
 
 exit 0
