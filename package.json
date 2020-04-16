@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "coc-css": ">=1.2.2",
+    "coc-css": ">=1.2.3",
     "coc-cssmodules": ">=1.0.0",
     "coc-docker": ">=0.2.1",
     "coc-emmet": ">=1.1.4",
     "coc-eslint": ">=1.2.6",
-    "coc-explorer": ">=0.3.17",
+    "coc-explorer": ">=0.4.0",
     "coc-git": ">=1.7.9",
     "coc-gitignore": ">=0.0.4",
     "coc-highlight": ">=1.2.5",
@@ -17,13 +17,14 @@
     "coc-phpls": ">=2.1.8",
     "coc-prettier": ">=1.1.12",
     "coc-sh": ">=0.4.0",
+    "coc-smartf": ">=1.1.10",
     "coc-snippets": ">=2.1.24",
     "coc-svg": ">=0.0.13",
     "coc-tslint-plugin": ">=1.1.1",
-    "coc-tsserver": ">=1.4.13",
+    "coc-tsserver": ">=1.4.15",
     "coc-vetur": ">=1.1.10",
     "coc-vimlsp": ">=0.5.1",
     "coc-webpack": ">=1.4.0",
-    "coc-xml": ">=1.11.0"
+    "coc-xml": ">=1.11.1"
   }
 }
