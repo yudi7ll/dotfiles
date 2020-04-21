@@ -7,12 +7,14 @@ alias dec=decode64
 alias grep=rg
 alias ida="/opt/idafree/ida64"
 alias mocp="mocp -T green_theme"
+alias n=nvim
 alias open='xdg-open &>/dev/null'
-alias sudo="sudo "
 alias pomodoro="/opt/pomodoro/bin/pomodoro"
 alias rm=trash
+alias p="sudo pacman"
 alias s="pacman -Ss"
 alias si="sudo pacman -S"
+alias sudo="sudo "
 
 # server
 alias server-start="echo 'Starting.....' && \
@@ -27,6 +29,7 @@ alias server-status="echo 'Checking.....\n' && \
 	sudo systemctl status mariadb.service && \
 	echo 'Done!'"
 alias server-stop="echo 'Stopping.....' && \
+    sudo systemctl stop php-fpm.service && \
 	sudo systemctl stop httpd.service && \
 	echo 'httpd.service stopped!' && \
 	sudo systemctl stop mariadb.service && \

@@ -14,7 +14,10 @@ set clipboard=unnamedplus
 set nowrap
 
 " edit files on the same dir
-nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+nmap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+
+" newtab
+" nnoremap <C-w>
 
 " Explore style
 let g:netrw_liststyle = 3
@@ -178,7 +181,8 @@ Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 
 " Colorschemes
-Plug 'flazz/vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
+Plug 'sjl/badwolf'
 
 " Lightline
 Plug 'itchyny/lightline.vim'
