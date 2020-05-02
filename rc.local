@@ -10,10 +10,13 @@
 # --x = mask number 6 (for directories: access by known filenames only)
 # --- = mask number 7 (no access)
 
-# sleep 4
+# sleep 1
 
-# mount -t ntfs -o rw,nosuid,nodev,relatime,user,fmask=1133,dmask=0022 UUID=01D507B3E09CCAD0 /mnt/Documents
-# mount -t ntfs -o rw,nosuid,nodev,relatime,user,fmask=1133,dmask=0022 UUID=01D4AC0DEF48E070 /mnt/Data
+# Solve device not found problem without sleep
+cd /home/x
+
+mount -t ntfs-3g -o rw,noatime,suid,dev,exec,auto,nouser,data=writeback,fmask=1133,dmask=0022,uid=1000 UUID=01D4AC0DEF48E070 /mnt/Data &> /dev/null
+mount -t ntfs-3g -o rw,noatime,suid,dev,exec,auto,nouser,data=writeback,fmask=1133,dmask=0022,uid=1000 UUID=01D507B3E09CCAD0 /mnt/Documents &> /dev/null
 
 mount --bind /mnt/Data/Video /home/x/Videos
 mount --bind /mnt/Data/X/Documents /home/x/Documents

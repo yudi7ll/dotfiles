@@ -2,9 +2,9 @@ set number
 set relativenumber
 set autoindent
 set smartindent
-set tabstop=4
+set tabstop=2
 set softtabstop=0
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set wildmode=longest,list,full
 set wildmenu
@@ -16,19 +16,18 @@ set nowrap
 " edit files on the same dir
 nmap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
-" newtab
-" nnoremap <C-w>
-
-" Explore style
-let g:netrw_liststyle = 3
-
 " python2
 let g:python_host_prog='/usr/bin/python2'
 " python3
 let g:python3_host_prog='/usr/bin/python'
 
-" coc-explorer
-nmap <C-n> :CocCommand explorer<CR>
+" NERDTree
+let g:NERDTreeWinSize=40
+nmap <C-n> :NERDTreeToggle <bar> :set relativenumber<CR>
+
+nmap <C-t> :tabnew<CR>
+nmap <C-j> :tabprev<CR>
+nmap <C-k> :tabnext<CR>
 
 " CTRLP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist/*,*/vendor/*
@@ -72,6 +71,7 @@ function! LightlineGitBlame() abort
   " return blame
   return winwidth(0) > 120 ? blame : ''
 endfunction
+
 
 " COC NVIM
 " if hidden is not set, TextEdit might fail.
@@ -153,67 +153,55 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " PLUGINS
 call plug#begin()
-" COC NVIM
-" latest tag
-Plug 'neoclide/coc.nvim'
-" Use release branch
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" RUN :CocInstall coc-html coc-css coc-emmet coc-tsserver coc-json coc-git coc-highlight coc-svg coc-vetur coc-explorer coc-webpack coc-gitignore coc-docker coc-sh coc-tslint-plugin coc-phpls coc-marketplace
 
 " coc-neco
-Plug 'Shougo/neco-vim'
-Plug 'neoclide/coc-neco'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-
-" Multiple commands
-Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
+" Plug 'Shougo/neco-vim'
+" Plug 'neoclide/coc-neco'
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " Loaded when clojure file is opened
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Multiple file types
-Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
+" Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 
 " On-demand loading on both conditions
-Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
+" Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
 
 " Code to execute when the plugin is lazily loaded on demand
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+" Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 
-" Colorschemes
-" Plug 'flazz/vim-colorschemes'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sjl/badwolf'
-
-" Lightline
 Plug 'itchyny/lightline.vim'
-
-" ctrlp
-Plug 'kien/ctrlp.vim'
-
-" tcomment
+" Plug 'kien/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
-
-" vim-surround
 Plug 'tpope/vim-surround'
-
-" JSX & Javascript
+Plug 'yuezk/vim-js'
 Plug 'chemzqm/vim-jsx-improve'
-
-" laravel blade
-Plug 'jwalton512/vim-blade'
-
-" editorConfig
+" Plug 'jwalton512/vim-blade'
 Plug 'editorconfig/editorconfig-vim'
-
-" fugitive
 Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'dart-lang/dart-vim-plugin'
+" Plug 'thosakwe/vim-flutter'
+" Plug 'ncm2/ncm2'
+" Plug 'roxma/nvim-yarp'
 
-" Flutter
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'thosakwe/vim-flutter'
+" enable ncm2 for all buffers
+" autocmd BufEnter * call ncm2#enable_for_buffer()
 
-autocmd! User goyo.vim echom 'Goyo is now loaded!'
+" IMPORTANT: :help Ncm2PopupOpen for more information
+" set completeopt=noinsert,menuone,noselect
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+" Plug 'ncm2/ncm2-bufword'
+" Plug 'ncm2/ncm2-path'
+
+" autocmd! User goyo.vim echom 'Goyo is now loaded!'
 call plug#end()
 
 colorscheme badwolf
-" colorscheme gruvbox
