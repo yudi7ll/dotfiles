@@ -75,7 +75,7 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git encode64 z sudo fzf extract safe-paste zsh-syntax-highlighting)
+plugins=(git encode64 sudo fzf extract safe-paste)
 
 
 # User configuration
@@ -107,6 +107,8 @@ export LANG=en_US.UTF-8
 source $HOME/.config/zsh/profile.zsh
 # alias
 source $HOME/.config/zsh/aliases.zsh
+# syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 
 # [[ -f `which neofetch` ]] && neofetch
 

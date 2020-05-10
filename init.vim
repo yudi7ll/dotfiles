@@ -21,9 +21,8 @@ let g:python_host_prog='/usr/bin/python2'
 " python3
 let g:python3_host_prog='/usr/bin/python'
 
-" NERDTree
-let g:NERDTreeWinSize=40
-nmap <C-n> :NERDTreeToggle <bar> :set relativenumber<CR>
+" coc explorer
+nmap <C-n> :CocCommand explorer<CR>
 
 nmap <C-t> :tabnew<CR>
 nmap <C-j> :tabprev<CR>
@@ -174,7 +173,7 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sjl/badwolf'
 Plug 'itchyny/lightline.vim'
-" Plug 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'yuezk/vim-js'
@@ -182,11 +181,7 @@ Plug 'chemzqm/vim-jsx-improve'
 " Plug 'jwalton512/vim-blade'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'dart-lang/dart-vim-plugin'
-" Plug 'thosakwe/vim-flutter'
 " Plug 'ncm2/ncm2'
 " Plug 'roxma/nvim-yarp'
 
@@ -205,3 +200,4 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 colorscheme badwolf
+

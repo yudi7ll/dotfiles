@@ -16,8 +16,8 @@ export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 # java home
 export JAVA_HOME=/usr/lib/jvm/default
 
-# shorter history
-# export HISTCONTROL=ignoredups
+# GPG Key
+export GPG_TTY=$(tty)
 
 # xrandr config
 xrandr --output eDP-1-1 --gamma 1:1:.95 --auto

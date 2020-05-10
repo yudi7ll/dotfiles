@@ -1,3 +1,4 @@
+alias artisan="php artisan"
 alias cat=bat
 alias copy=clipcopy
 alias ctf="cd ~/dev/cyber-sec/CTF"
@@ -14,3 +15,4 @@ alias p="sudo pacman"
 alias s="pacman -Ss"
 alias si="sudo pacman -S"
 alias sudo="sudo "
+alias xargs="xargs "

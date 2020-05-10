@@ -4,7 +4,8 @@
     "coc-cssmodules": ">=1.0.0",
     "coc-docker": ">=0.2.1",
     "coc-emmet": ">=1.1.4",
-    "coc-git": ">=1.7.11",
+    "coc-explorer": ">=0.6.2",
+    "coc-git": ">=1.7.12",
     "coc-gitignore": ">=0.0.4",
     "coc-highlight": ">=1.2.5",
     "coc-html": ">=1.2.4",
@@ -16,7 +17,7 @@
     "coc-python": ">=1.2.12",
     "coc-tsserver": ">=1.5.1",
     "coc-vetur": ">=1.1.10",
-    "coc-vimlsp": ">=0.5.2",
+    "coc-vimlsp": ">=0.6.0",
     "coc-webpack": ">=1.4.0",
     "coc-xml": ">=1.11.1"
   }
