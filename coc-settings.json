@@ -1,8 +1,8 @@
 {
 	"explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
 	"emmet.includeLanguages": {
 		"vue-html": "html",
-		"javascript": "javascriptreact",
-		"php": "javascriptreact"
+		"javascript": "javascriptreact"
 	}
 }
