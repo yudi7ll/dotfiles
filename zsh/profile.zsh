@@ -19,5 +19,8 @@ export JAVA_HOME=/usr/lib/jvm/default
 # GPG Key
 export GPG_TTY=$(tty)
 
+# Java antialiasing
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+
 # xrandr config
 xrandr --output eDP-1-1 --gamma 1:1:.95 --auto
