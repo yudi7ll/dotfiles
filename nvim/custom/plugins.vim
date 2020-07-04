@@ -30,10 +30,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'Yggdroot/indentLine'
-" Plug 'noahfrederick/vim-composer'
-" Plug 'noahfrederick/vim-laravel'
 Plug 'junegunn/fzf.vim'
 Plug 'honza/vim-snippets'
+Plug 'vim-vdebug/vdebug'
 
 autocmd! User goyo.vim echom 'Goyo is now loaded!'
 call plug#end()
