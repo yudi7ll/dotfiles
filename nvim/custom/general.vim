@@ -1,18 +1,19 @@
+set autoindent
+set clipboard=unnamedplus
+set colorcolumn=80
+set cursorline
+set expandtab
+set nowrap
 set number
 set relativenumber
-set autoindent
+set shell=/usr/bin/zsh
 set smartindent
-set tabstop=2
 set softtabstop=0
 set shiftwidth=2
-set expandtab
+set tabstop=2
+set termguicolors
 set wildmode=longest,full
 set wildmenu
-set cursorline
-set termguicolors
-set clipboard=unnamedplus
-set nowrap
-set shell=/usr/bin/zsh
 
 " edit files on the same dir
 nmap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>

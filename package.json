@@ -15,6 +15,7 @@
     "coc-pairs": ">=1.2.21",
     "coc-phpls": ">=2.1.8",
     "coc-python": ">=1.2.12",
+    "coc-scssmodules": ">=0.2.0",
     "coc-snippets": ">=2.1.26",
     "coc-tsserver": ">=1.5.1",
     "coc-vimlsp": ">=0.8.0",
