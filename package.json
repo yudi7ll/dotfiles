@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "coc-css": ">=1.2.3",
+    "coc-css": ">=1.2.4",
     "coc-cssmodules": ">=1.0.0",
-    "coc-docker": ">=0.2.1",
-    "coc-emmet": ">=1.1.4",
-    "coc-explorer": ">=0.7.6",
-    "coc-git": ">=1.7.13",
+    "coc-docker": ">=0.3.0",
+    "coc-emmet": ">=1.1.6",
+    "coc-explorer": ">=0.7.18",
+    "coc-git": ">=1.8.0",
     "coc-gitignore": ">=0.0.4",
     "coc-highlight": ">=1.2.5",
     "coc-html": ">=1.2.4",
@@ -16,9 +16,9 @@
     "coc-phpls": ">=2.1.8",
     "coc-python": ">=1.2.12",
     "coc-scssmodules": ">=0.2.0",
-    "coc-snippets": ">=2.1.26",
-    "coc-tsserver": ">=1.5.1",
-    "coc-vimlsp": ">=0.8.0",
+    "coc-snippets": ">=2.1.28",
+    "coc-tsserver": ">=1.5.2",
+    "coc-vimlsp": ">=0.9.1",
     "coc-xml": ">=1.11.1"
   }
 }

@@ -20,7 +20,6 @@ Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sjl/badwolf'
 Plug 'itchyny/lightline.vim'
-" Plug 'kien/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 " Plug 'yuezk/vim-js'
@@ -29,10 +28,11 @@ Plug 'jwalton512/vim-blade'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
-" Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf.vim'
 Plug 'honza/vim-snippets'
 Plug 'vim-vdebug/vdebug'
+Plug 'noahfrederick/vim-laravel'
 
 autocmd! User goyo.vim echom 'Goyo is now loaded!'
 call plug#end()

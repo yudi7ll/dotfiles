@@ -3,6 +3,7 @@
   "explorer.previewAction.onHover": false,
 	"emmet.includeLanguages": {
 		"vue-html": "html",
-		"javascript": "javascriptreact"
+		"javascript": "javascriptreact",
+    "blade": "html"
 	}
 }

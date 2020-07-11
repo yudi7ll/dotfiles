@@ -81,10 +81,12 @@ plugins=(git encode64 sudo fzf extract safe-paste docker)
 # User configuration
 
 # Kitty Terminal
-autoload -Uz compinit
-compinit
-# Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+if [[ -f `which kitty` ]]; then
+  autoload -Uz compinit
+  compinit
+  # Completion for kitty
+  kitty + complete setup zsh | source /dev/stdin
+fi
 
 setopt HIST_IGNORE_ALL_DUPS
 
@@ -104,11 +106,18 @@ export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # profile
-source $HOME/.config/zsh/profile.zsh
+PROFILE=$HOME/.config/zsh/profile.zsh
+[[ -f $PROFILE ]] && source $PROFILE
+
 # alias
-source $HOME/.config/zsh/aliases.zsh
+ALIASES=$HOME/.config/zsh/aliases.zsh
+[[ -f $ALIASES ]] && source $ALIASES
+
 # syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+SYNTAX_HIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -f $SYNTAX_HIGHLIGHTING ]]; then
+  source $SYNTAX_HIGHLIGHTING
+fi
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

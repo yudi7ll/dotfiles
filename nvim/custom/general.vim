@@ -12,6 +12,7 @@ set softtabstop=0
 set shiftwidth=2
 set tabstop=2
 set termguicolors
+set textwidth=0
 set wildmode=longest,full
 set wildmenu
 

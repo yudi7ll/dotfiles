@@ -9,6 +9,6 @@ alias open='xdg-open &>/dev/null'
 alias rm="trash -i"
 alias p="sudo pacman"
 alias s="pacman -Ss"
+alias serve="php artisan serve &>/dev/null"
 alias si="sudo pacman -S"
 alias sudo="sudo "
-alias zconfig="cd ~/.config/zsh"
