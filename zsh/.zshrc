@@ -103,7 +103,7 @@ export LANG=en_US.UTF-8
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # profile
 PROFILE=$HOME/.config/zsh/profile.zsh

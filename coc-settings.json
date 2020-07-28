@@ -1,9 +1,13 @@
 {
 	"explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
+	"explorer.previewAction.onHover": false,
+	"explorer.autoExpandOptions": [
+		"recursiveSingle"
+	],
 	"emmet.includeLanguages": {
 		"vue-html": "html",
 		"javascript": "javascriptreact",
-    "blade": "html"
-	}
+		"blade": "html"
+	},
+	"html.autoClosingTags": true
 }

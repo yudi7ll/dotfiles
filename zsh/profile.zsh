@@ -23,4 +23,4 @@ export GPG_TTY=$(tty)
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 
 # xrandr config
-xrandr --output eDP-1-1 --gamma 1:1:.95 --auto
+# xrandr --output eDP-1-1 --gamma 1:1:.95 --auto
