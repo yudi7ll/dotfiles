@@ -3,6 +3,7 @@ alias cat=bat
 alias copy=clipcopy
 alias ctf="cd ~/dev/cyber-sec/CTF"
 alias du=dust
+alias feh="feh -."
 alias mocp="mocp -T green_theme"
 alias open='xdg-open &>/dev/null'
 alias rm="trash -i"

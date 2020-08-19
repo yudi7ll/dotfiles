@@ -10,7 +10,7 @@ set shell=/usr/bin/zsh
 set smartindent
 set smarttab
 set shiftwidth=4
-set syntax=on
+set syntax=enable
 set tabstop=4
 set termguicolors
 set textwidth=0
@@ -32,6 +32,11 @@ silent! nmap <C-t> :tabnew<CR>
 silent! nmap <C-j> :tabprev<CR>
 silent! nmap <C-k> :tabnext<CR>
 
+" tsx dark red
+hi tsxTagName guifg=#E06C75
+hi tsxComponentName guifg=#E06C75
+hi tsxCloseComponentName guifg=#E06C75
+
 " FZF
 " exclude modules,vendor,etc
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
@@ -39,4 +44,3 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 silent! nmap <C-p> :FZF<CR>
 
 colorscheme badwolf
-" colorscheme gruvbox

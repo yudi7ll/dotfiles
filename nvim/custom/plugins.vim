@@ -21,8 +21,11 @@ let g:coc_global_extensions = [
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
 
+" colorscheme
 Plug 'sjl/badwolf'
 " Plug 'morhetz/gruvbox'
+
+
 Plug 'itchyny/lightline.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'

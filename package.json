@@ -18,6 +18,7 @@
     "coc-python": ">=1.2.12",
     "coc-scssmodules": ">=0.2.0",
     "coc-sh": ">=0.5.1",
+    "coc-svg": ">=0.0.13",
     "coc-tsserver": ">=1.5.3",
     "coc-vimlsp": ">=0.9.1",
     "coc-webpack": ">=1.4.0",
