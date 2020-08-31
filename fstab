@@ -3,17 +3,10 @@
 
 # <file system> <dir> <type> <options> <dump> <pass>
 # /dev/sda3
-UUID=a8d83251-be73-4fb4-b64d-d69035cb44dd /           ext4        defaults,discard  0 1
+UUID=a8d83251-be73-4fb4-b64d-d69035cb44dd / 			ext4        defaults,discard  				0 1
 
 # /dev/sda4
-UUID=d4208dac-744d-43ac-8b2f-93e8912db918 /home       ext4        defaults          0 2
+UUID=d4208dac-744d-43ac-8b2f-93e8912db918 /home 		ext4        defaults 					 	0 2
 
 # /dev/sdb1
-UUID=9f17249a-5a61-4b51-b6e9-b5329ee3b65f /mnt/HDD    ext4        defaults          0 2
-
-# bind HDD
-/mnt/HDD/Downloads            /home/yudi/Downloads    ext4        defaults,bind     0 0
-/mnt/HDD/dev                        /home/yudi/dev    ext4        defaults,bind     0 0
-/mnt/HDD/Documents            /home/yudi/Documents    ext4        defaults,bind     0 0
-/mnt/HDD/Music                    /home/yudi/Music    ext4        defaults,bind     0 0
-/mnt/HDD/Design/Pictures       /home/yudi/Pictures    ext4        defaults,bind     0 0
+UUID=9f17249a-5a61-4b51-b6e9-b5329ee3b65f /hdd 			ext4        defaults 						0 2
