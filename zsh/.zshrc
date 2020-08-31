@@ -28,7 +28,7 @@ ZSH_THEME="powerlevel10k"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -75,8 +75,7 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git encode64 sudo fzf extract safe-paste docker)
-
+plugins=(git encode64 sudo fzf extract safe-paste docker z zsh-syntax-highlighting)
 
 # User configuration
 
@@ -88,6 +87,7 @@ if [[ -f `which kitty` ]]; then
   kitty + complete setup zsh | source /dev/stdin
 fi
 
+# ignore all duplicated history
 setopt HIST_IGNORE_ALL_DUPS
 
 export MANPATH="/usr/local/man:$MANPATH"
@@ -112,12 +112,6 @@ PROFILE=$HOME/.config/zsh/profile.zsh
 # alias
 ALIASES=$HOME/.config/zsh/aliases.zsh
 [[ -f $ALIASES ]] && source $ALIASES
-
-# syntax highlighting
-SYNTAX_HIGHLIGHTING=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-if [[ -f $SYNTAX_HIGHLIGHTING ]]; then
-  source $SYNTAX_HIGHLIGHTING
-fi
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
