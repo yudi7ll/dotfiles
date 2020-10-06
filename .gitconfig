@@ -1,0 +1,6 @@
+[user]
+	email = madewahyudi22@gmail.com
+	name = Yudi
+	signingkey = 9B9D2EC9B527B052
+[commit]
+	gpgsign = true
