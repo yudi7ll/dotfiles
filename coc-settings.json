@@ -9,7 +9,8 @@
 	"emmet.includeLanguages": {
 		"vue-html": "html",
 		"javascript": "javascriptreact",
-		"blade": "html"
+		"blade": "html",
+		"pug": "html-slim"
 	},
 	"html.autoClosingTags": true
 }

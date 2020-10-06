@@ -2,7 +2,7 @@ set autoindent
 set clipboard=unnamedplus
 set colorcolumn=80
 set cursorline
-" set expandtab
+set expandtab
 set nowrap
 set number
 set relativenumber
@@ -36,6 +36,8 @@ silent! nmap <C-k> :tabnext<CR>
 hi tsxTagName guifg=#E06C75
 hi tsxComponentName guifg=#E06C75
 hi tsxCloseComponentName guifg=#E06C75
+
+" autocmd BufEnter *.pug set filetype=slim
 
 " FZF
 " exclude modules,vendor,etc

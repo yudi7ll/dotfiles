@@ -5,6 +5,7 @@ alias ctf="cd ~/dev/cyber-sec/CTF"
 alias du=dust
 alias feh="feh -."
 alias mocp="mocp -T green_theme"
+alias o='xdg-open &>/dev/null'
 alias open='xdg-open &>/dev/null'
 alias rm="trash -i"
 alias p="sudo pacman"

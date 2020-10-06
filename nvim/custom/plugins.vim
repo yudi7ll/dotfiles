@@ -44,6 +44,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'noahfrederick/vim-laravel'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'digitaltoad/vim-pug'
+Plug 'slim-template/vim-slim'
 
 autocmd! User goyo.vim echom 'Goyo is now loaded!'
 call plug#end()
