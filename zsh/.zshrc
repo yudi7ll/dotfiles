@@ -75,7 +75,7 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh/
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git encode64 sudo fzf extract safe-paste docker z zsh-syntax-highlighting)
+plugins=(git encode64 sudo fzf extract safe-paste docker zsh-syntax-highlighting)
 
 # User configuration
 
@@ -112,6 +112,10 @@ PROFILE=$HOME/.config/zsh/profile.zsh
 # alias
 ALIASES=$HOME/.config/zsh/aliases.zsh
 [[ -f $ALIASES ]] && source $ALIASES
+
+# nvm
+NVM=/usr/share/nvm/init-nvm.sh
+[[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

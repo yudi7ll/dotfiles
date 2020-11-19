@@ -2,7 +2,7 @@ set autoindent
 set clipboard=unnamedplus
 set colorcolumn=80
 set cursorline
-set expandtab
+" set expandtab
 set nowrap
 set number
 set relativenumber
