@@ -9,11 +9,10 @@ let g:coc_global_extensions = [
 		\ 'coc-css',
 		\ 'coc-html',
 		\ 'coc-json',
-		\ 'coc-pairs',
 		\ 'coc-tsserver',
+		\ 'coc-pairs',
 		\ 'coc-phpls',
 		\ 'coc-yaml',
-		\ 'coc-explorer',
 		\ 'coc-xml',
 		\ ]
 
@@ -36,16 +35,21 @@ Plug 'chemzqm/vim-jsx-improve'
 Plug 'jwalton512/vim-blade'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'ryanoasis/vim-devicons'
 " Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf.vim'
 " Plug 'honza/vim-snippets'
 " Plug 'vim-vdebug/vdebug'
-Plug 'noahfrederick/vim-laravel'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'digitaltoad/vim-pug'
 Plug 'slim-template/vim-slim'
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+" Plug 'tommcdo/vim-lion'
+Plug 'nelstrom/vim-visual-star-search'
+" Plug 'chaoren/vim-wordmotion'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'antoinemadec/FixCursorHold.nvim'
 
 autocmd! User goyo.vim echom 'Goyo is now loaded!'
 call plug#end()

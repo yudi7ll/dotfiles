@@ -2,6 +2,7 @@ set autoindent
 set clipboard=unnamedplus
 set colorcolumn=80
 set cursorline
+set encoding=UTF-8
 " set expandtab
 set nowrap
 set number
@@ -19,19 +20,27 @@ set wildmenu
 
 " edit files on the same dir
 nmap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
-
 " python2
 let g:python_host_prog='/usr/bin/python2'
 " python3
 let g:python3_host_prog='/usr/bin/python3'
-
 " coc explorer
-silent! nmap <C-n> :CocCommand explorer<CR>
-
-silent! nmap <C-t> :tabnew<CR>
-silent! nmap <C-j> :tabprev<CR>
-silent! nmap <C-k> :tabnext<CR>
-
+" silent! nmap <C-n> :CocCommand explorer<CR>
+" pear tree
+let g:pear_tree_repeatable_expand = 0
+" vim lion
+let g:lion_squeeze_spaces = 1
+" fern.vim
+nmap <silent> <C-n> :Fern . -drawer -reveal=% -width=40 -toggle<CR>
+nmap <silent> <C-m> :Fern %:h -drawer -width=40 -toggle<CR>
+" silent! nmap <C-n> :Fern . -drawer -width=40 -toggle<CR>
+" indentline
+" let g:indentLine_char       = '▏'
+" let g:indentLine_setConceal = 1
+" tab
+nmap <silent> <C-t> :tabnew<CR>
+nmap <silent> <C-j> :tabprev<CR>
+nmap <silent> <C-k> :tabnext<CR>
 " tsx dark red
 hi tsxTagName guifg=#E06C75
 hi tsxComponentName guifg=#E06C75
