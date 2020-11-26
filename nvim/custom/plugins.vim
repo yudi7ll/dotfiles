@@ -49,6 +49,7 @@ Plug 'lambdalisue/fern-git-status.vim'
 Plug 'nelstrom/vim-visual-star-search'
 " Plug 'chaoren/vim-wordmotion'
 Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 
 autocmd! User goyo.vim echom 'Goyo is now loaded!'

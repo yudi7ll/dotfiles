@@ -30,10 +30,6 @@ let g:python3_host_prog='/usr/bin/python3'
 let g:pear_tree_repeatable_expand = 0
 " vim lion
 let g:lion_squeeze_spaces = 1
-" fern.vim
-nmap <silent> <C-n> :Fern . -drawer -reveal=% -width=40 -toggle<CR>
-nmap <silent> <C-m> :Fern %:h -drawer -width=40 -toggle<CR>
-" silent! nmap <C-n> :Fern . -drawer -width=40 -toggle<CR>
 " indentline
 " let g:indentLine_char       = '▏'
 " let g:indentLine_setConceal = 1
