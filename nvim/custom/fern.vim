@@ -30,6 +30,7 @@ function! s:init_fern() abort
 	nmap <buffer> X <Plug>(fern-action-open:system)
 	nmap <buffer> <BS> <Plug>(fern-action-leave)
 	nmap <buffer> <CR> <Plug>(fern-action-open-or-enter)
+	nmap <buffer> <TAB> <Plug>(fern-action-mark:toggle)
 endfunction
 
 augroup FernCustom
