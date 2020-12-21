@@ -23,7 +23,7 @@ function! s:init_fern() abort
 	nmap <buffer> r <Plug>(fern-action-move)
 	nmap <buffer> R <Plug>(fern-action-reload)
 	nmap <buffer> s <Plug>(fern-action-open:split)
-	nmap <buffer> S <Plug>(fern-action-hidden:toggle)
+	nmap <buffer> H <Plug>(fern-action-hidden:toggle)
 	nmap <buffer> t <Plug>(fern-action-open:tabedit)
 	nmap <buffer> v <Plug>(fern-action-open:vsplit)
 	nmap <buffer> x <Plug>(fern-action-clipboard-move)

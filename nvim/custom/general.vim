@@ -4,6 +4,7 @@ set colorcolumn=80
 set cursorline
 set encoding=UTF-8
 " set expandtab
+set nocompatible
 set nowrap
 set number
 set relativenumber
@@ -28,8 +29,6 @@ let g:python3_host_prog='/usr/bin/python3'
 " silent! nmap <C-n> :CocCommand explorer<CR>
 " pear tree
 let g:pear_tree_repeatable_expand = 0
-" vim lion
-let g:lion_squeeze_spaces = 1
 " indentline
 " let g:indentLine_char       = '▏'
 " let g:indentLine_setConceal = 1
@@ -50,4 +49,9 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 " silent! nmap <C-p> :GFiles --exclude-standard --others --cached<CR>
 silent! nmap <C-p> :FZF<CR>
 
+" linter
+let g:ale_fix_on_save = 1
+let b:ale_fixers = ['prettier', 'eslint']
+
 colorscheme badwolf
+" colorscheme gruvbox
