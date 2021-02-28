@@ -7,7 +7,7 @@ nmap <silent> <C-n> :Fern . -drawer -reveal=% -width=40 -toggle<CR>
 function! s:init_fern() abort
 	nmap <buffer><expr> <Plug>(fern-custom-open-expand)
 				\ fern#smart#leaf(
-				\ 	"<Plug>(fern-action-open:select)",
+				\ 	"<Plug>(fern-action-open-or-enter)",
 				\ 	"<Plug>(fern-action-expand:stay)",
 				\ )
 	nmap <buffer> A <Plug>(fern-action-new-dir)

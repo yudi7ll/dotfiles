@@ -114,8 +114,8 @@ ALIASES=$HOME/.config/zsh/aliases.zsh
 [[ -f $ALIASES ]] && source $ALIASES
 
 # nvm
-NVM=/usr/share/nvm/init-nvm.sh
-[[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
+# NVM=/usr/share/nvm/init-nvm.sh
+# [[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
