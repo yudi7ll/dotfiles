@@ -12,32 +12,30 @@ let g:coc_global_extensions = [
 		\ 'coc-marketplace',
 		\ 'coc-pairs',
 		\ 'coc-phpls',
+		\ 'coc-python',
 		\ 'coc-tsserver',
-		\ 'coc-vimlsp',
 		\ 'coc-yaml',
 		\ 'coc-xml'
 		\ ]
 
 " coc-neco
-" Plug 'Shougo/neco-vim'
-" Plug 'neoclide/coc-neco'
+Plug 'Shougo/neco-vim'
+Plug 'neoclide/coc-neco'
 
 " colorscheme
 Plug 'sjl/badwolf'
 Plug 'ghifarit53/tokyonight-vim'
-" Plug 'morhetz/gruvbox'
-" Plug 'tomasr/molokai'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ekalinin/Dockerfile.vim'
+" Plug 'ekalinin/Dockerfile.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'Yggdroot/indentLine'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 " Plug 'tommcdo/vim-lion'
 Plug 'nelstrom/vim-visual-star-search'
 " Plug 'chaoren/vim-wordmotion'
@@ -52,8 +50,14 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'dense-analysis/ale'
 " Plug 'tobyS/vmustache'
 " Plug 'tobyS/pdv'
-Plug 'sumpygump/php-documentor-vim'
-Plug 'jwalton512/vim-blade'
+" Plug 'sumpygump/php-documentor-vim'
+" Plug 'jwalton512/vim-blade'
 
-" autocmd! User goyo.vim echom 'Goyo is now loaded!'
+" Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+" Plug 'ncm2/ncm2'
+" Plug 'roxma/nvim-yarp'
+" Plug 'phpactor/ncm2-phpactor'
+" Plug 'ncm2/ncm2-ultisnips'
+" Plug 'SirVer/ultisnips'
+
 call plug#end()

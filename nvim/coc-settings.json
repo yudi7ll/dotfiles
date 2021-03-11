@@ -6,6 +6,7 @@
 		"blade": "html",
 		"pug": "html-slim"
 	},
+	"emmet.priority": 1,
 	"html.autoClosingTags": true,
 	"eslint.autoFixOnSave": true,
 	"tsserver.typingsCacheLocation": "~/.cache/",

@@ -6,7 +6,6 @@ set completeopt=longest,menuone
 set cursorline
 set encoding=UTF-8
 set expandtab
-set nocompatible
 set noswapfile
 set nowrap
 set number
@@ -15,7 +14,6 @@ set shell=/usr/bin/zsh
 set smartindent
 set smarttab
 set shiftwidth=2
-set syntax=enable
 set tabstop=2
 set termguicolors
 set textwidth=0
@@ -55,11 +53,6 @@ nmap <silent> <C-t> :tabnew<CR>
 nmap <silent> <C-h> :tabprev<CR>
 nmap <silent> <C-l> :tabnext<CR>
 
-" tsx dark red
-" hi tsxTagName guifg=#E06C75
-" hi tsxComponentName guifg=#E06C75
-" hi tsxCloseComponentName guifg=#E06C75
-
 " autocmd BufEnter *.pug set filetype=slim
 
 " FZF
@@ -83,5 +76,11 @@ autocmd BufReadPost *
 au BufRead,BufNewFile *.php inoremap <buffer> <C-B> :call PhpDoc()<CR>
 au BufRead,BufNewFile *.php nnoremap <buffer> <C-B> :call PhpDoc()<CR>
 au BufRead,BufNewFile *.php vnoremap <buffer> <C-B> :call PhpDocRange()<CR>
+
+" Blade
+let g:blade_custom_directives = ['csrf', 'method']
+let g:blade_custom_directives_pairs = {
+  \ 'error': 'enderror',
+  \ }
 
 colorscheme badwolf
