@@ -18,3 +18,6 @@ export GPG_TTY=$(tty)
 
 # FNM
 eval "$(fnm env)"
+
+# FZF
+export FZF_DEFAULT_COMMAND='ag -g ""'
