@@ -1,0 +1,8 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+
+127.0.0.1   	 		localhost           kalilinux
+127.0.0.1   	 		localhost           archlinux
+::1       				localhost           kalilinux
+103.145.226.170 	ksl          				ksl
+103.145.226.168 	stikomfest    			stikomfest

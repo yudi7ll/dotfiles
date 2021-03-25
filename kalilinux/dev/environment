@@ -1,0 +1,25 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+
+# QT Theme
+QT_QPA_PLATFORMTHEME=qt5ct
+
+# Java Application Anti Aliasing
+_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+JAVA_HOME=/usr/lib/jvm/default
+
+VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
+
+# Firefox
+MOZ_WEBRENDER=1
+
+# Node
+N_PREFIX=/home/yudi/.local/share/node
+
+# consistent file dialog
+GTK_USER_PORTAL=1
+
+# XDG_RUNTIME_DIR=/run/user/1000
