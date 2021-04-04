@@ -1,6 +1,6 @@
 # List directory contents
-alias lsa='exa -lag --group-directories-first'
-alias l='exa -lag --group-directories-first'
-alias ll='exa -lg --group-directories-first'
-alias la='exa -lAg --group-directories-first'
-alias ldir='exa -lgD'
+alias lsa='exa -lagH --group-directories-first'
+alias l='exa -lagH --group-directories-first'
+alias ll='exa -lgH --group-directories-first'
+alias la='exa -lAgH --group-directories-first'
+alias ldir='exa -lgDH'
