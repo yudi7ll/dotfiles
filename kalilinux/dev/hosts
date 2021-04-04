@@ -6,3 +6,5 @@
 ::1       				localhost           kalilinux
 103.145.226.170 	ksl          				ksl
 103.145.226.168 	stikomfest    			stikomfest
+10.10.10.216 laboratory.htb 
+10.10.10.216 git.laboratory.htb

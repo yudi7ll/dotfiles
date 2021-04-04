@@ -23,14 +23,15 @@ function boot() {
 		-u yudi \
 		-v /hdd:/hdd \
 		-v /run/user/1000:/run/user/1000 \
-		-v dev/environment:/etc/environment \
-		-v dev/hosts:/etc/hosts \
+		-v $HOME/.config/arch-config/kalilinux/dev/environment:/etc/environment \
+		-v $HOME/.config/arch-config/kalilinux/dev/hosts:/etc/hosts \
 		-v $HOME/.config/zsh:$HOME/.config/zsh:ro \
+		-v $HOME/.config/oh-my-zsh:$HOME/.config/ph-my-zsh:ro \
 		-v $HOME/.config/xfce4:$HOME/.config/xfce4:ro \
-		-v $HOME/.gnupg:$HOME/.config/.gnupg:ro \
-		-v $HOME/.p10k.zsh:$HOME/.config/.p10k.zsh:ro \
-		-v $HOME/.themes:$HOME/.config/.themes:ro \
-		-v $HOME/.zshrc:$HOME/.config/.zshrc:ro \
+		-v $HOME/.gnupg:$HOME/.gnupg:ro \
+		-v $HOME/.p10k.zsh:$HOME/.p10k.zsh:ro \
+		-v $HOME/.themes:$HOME/.themes:ro \
+		-v $HOME/.zshrc:$HOME/.zshrc:ro \
 		-v $HOME/.Xauthority:$HOME/.Xauthority \
 		-v /tmp/:/tmp/ \
 		$IMAGE

@@ -1,15 +1,13 @@
 alias artisan="php artisan"
 alias cat=bat
 alias copy=clipcopy
-alias ctf="cd ~/dev/hacc/CTF"
 alias du=dust
-alias feh="feh -."
 alias mocp="mocp -T green_theme"
 alias o='xdg-open &>/dev/null'
 alias open='xdg-open &>/dev/null'
 alias rm="trash -i"
 alias p="sudo pacman"
-alias paru="paru --removemake --sudoloop --bottomup"
+alias paru="paru --removemake --sudoloop --bottomup --skipreview"
 alias s="pacman -Ss"
 alias serve="php artisan serve --host 0.0.0.0 &>/dev/null"
 alias si="sudo pacman -S"
