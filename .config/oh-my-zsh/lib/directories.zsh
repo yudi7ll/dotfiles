@@ -1,6 +1,6 @@
 # List directory contents
-alias lsa='exa -lagH --group-directories-first'
-alias l='exa -lagH --group-directories-first'
-alias ll='exa -lgH --group-directories-first'
-alias la='exa -lAgH --group-directories-first'
-alias ldir='exa -lgDH'
+alias lsa='exa -lagH --group-directories-first --git --icons'
+alias l='exa -lagH --group-directories-first --git --icons'
+alias ll='exa -lgH --group-directories-first --git --icons'
+alias la='exa -lAgH --group-directories-first --git --icons'
+alias ldir='exa -lgDH --git --icons'
