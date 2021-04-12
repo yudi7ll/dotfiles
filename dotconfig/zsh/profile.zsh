@@ -25,3 +25,7 @@ export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
 
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_modules,vendor}/*"'
+
+# Android
+export ANDROID_SDK=$HOME/Android/Sdk
+export PATH=$HOME/Android/Sdk/platform-tools:$PATH
