@@ -78,8 +78,6 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh/
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git encode64 sudo fzf extract safe-paste docker zsh-syntax-highlighting)
 
-# User configuration
-
 # Kitty Terminal
 if [[ -f `which kitty` ]]; then
   autoload -Uz compinit
@@ -97,11 +95,11 @@ export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"

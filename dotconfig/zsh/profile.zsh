@@ -17,11 +17,8 @@ export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 export GPG_TTY=$(tty)
 
 # FNM
-export PATH="/tmp/fnm_multishell_7165_1616283519681/bin":$PATH
-export FNM_MULTISHELL_PATH="/tmp/fnm_multishell_7165_1616283519681"
-export FNM_DIR="/home/yudi/.fnm"
-export FNM_LOGLEVEL="info"
-export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
+export PATH=/home/yudi/.fnm:$PATH
+eval "`fnm env`"
 
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_modules,vendor}/*"'
@@ -29,3 +26,6 @@ export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_mo
 # Android
 export ANDROID_SDK=$HOME/Android/Sdk
 export PATH=$HOME/Android/Sdk/platform-tools:$PATH
+
+# tmp
+export TMPDIR="/tmp"
