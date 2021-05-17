@@ -1,9 +1,11 @@
 alias artisan="php artisan"
 alias cat=bat
 alias copy=clipcopy
-alias dc="docker-compose"
-alias dcup="docker-compose up -d"
+alias d="docker-compose"
+alias dx="docker-compose exec"
+alias dup="docker-compose up -d"
 alias du=dust
+alias icat="kitty +kitten icat"
 alias mocp="mocp -T green_theme"
 alias o='xdg-open &>/dev/null'
 alias open='xdg-open &>/dev/null'
