@@ -1,5 +1,6 @@
 alias artisan="php artisan"
-alias cat=bat
+[[ -f `which bat` ]] && alias cat=bat 
+[[ -f `which batcat` ]] && alias cat=batcat
 alias copy=clipcopy
 alias d="docker-compose"
 alias dx="docker-compose exec"
