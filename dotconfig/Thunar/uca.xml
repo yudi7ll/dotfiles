@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+	<action>
+		<icon>utilities-terminal</icon>
+		<name>Open Terminal Here</name>
+		<unique-id>1622264280736445-1</unique-id>
+		<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+		<description>Open Terminal Emulator</description>
+		<patterns>*</patterns>
+		<startup-notify />
+		<directories />
+	</action>
+	<action>
+		<icon>system-file-manager</icon>
+		<name>Open Folder as Root</name>
+		<unique-id>1622264280736459-2</unique-id>
+		<command>gksu thunar %f</command>
+		<description></description>
+		<patterns>*</patterns>
+		<startup-notify />
+		<directories />
+	</action>
+	<action>
+		<icon>state-information</icon>
+		<name>Media Info</name>
+		<unique-id>1622264280736472-3</unique-id>
+		<command>mediainfo %f | zenity --text-info --font=&apos;Hack Nerd Font&apos; --width=800 --height=600 --title %n</command>
+		<description>Display media info</description>
+		<patterns>*</patterns>
+		<startup-notify />
+		<audio-files />
+		<image-files />
+		<video-files />
+	</action>
+	<action>
+		<icon>ubuntuone-client-updating</icon>
+		<name>Upload to imgur</name>
+		<unique-id>1622264280736493-4</unique-id>
+		<command>~/.config/Thunar/thunar-upload-to-imgur.sh -f %f</command>
+		<description>Upload to imgur</description>
+		<patterns>*</patterns>
+		<image-files />
+		<video-files />
+	</action>
+</actions>
