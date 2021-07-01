@@ -115,7 +115,7 @@ fi
 
 TITLE='Uploading to Imgur...'$(basename "${f}")
 
-IMGUR_CLIENT_ID="546c25a59c58ad7"
+IMGUR_CLIENT_ID="3e7a4deb7ac67da"
 TMPFILE=$(mktemp)
 
 [ ! -z "${w##*[!0-9]*}" ]	&& WIDTH=$w		|| WIDTH=350
