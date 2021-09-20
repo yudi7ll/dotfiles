@@ -16,9 +16,8 @@ export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 # GPG Key
 export GPG_TTY=$(tty)
 
-# FNM
-export PATH=/home/yudi/.fnm:$PATH
-eval "`fnm env`"
+# Node
+export N_PREFIX=$HOME/.local
 
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_modules,vendor}/*"'
