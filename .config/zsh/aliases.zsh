@@ -19,3 +19,10 @@ alias serve="php artisan serve --host 0.0.0.0 &>/dev/null"
 alias si="sudo pacman -S"
 alias sudo="sudo "
 alias tinker="docker-compose exec app php artisan tinker"
+
+# directories
+alias lsa='exa -lagH --group-directories-first --icons'
+alias l='exa -lagH --group-directories-first --icons'
+alias ll='exa -lgH --group-directories-first --icons'
+alias la='exa -lAgH --group-directories-first --icons'
+alias ldir='exa -lgDH --git --icons'
