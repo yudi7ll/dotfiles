@@ -121,7 +121,3 @@ ALIASES=$HOME/.config/zsh/aliases.zsh
 # NVM=/usr/share/nvm/init-nvm.sh
 # [[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
 
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-  mkdir $ZSH_CACHE_DIR
-fi

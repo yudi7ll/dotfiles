@@ -33,3 +33,6 @@ export TMPDIR="/tmp"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel ${_JAVA_OPTIONS}"
 export JAVA_HOME=/usr/lib/jvm/default
 export JAVA_FONTS=/usr/share/fonts/TTF
+
+# GPG
+export GPG_TTY=$(tty)
