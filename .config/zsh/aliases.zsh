@@ -2,6 +2,7 @@ alias artisan="php artisan"
 [[ -f `which bat` ]] && alias cat=bat 
 [[ -f `which batcat` ]] && alias cat=batcat
 alias copy=clipcopy
+alias drun='docker run -ti --rm -v $PWD:/app -w /app'
 alias d="docker-compose"
 alias dx="docker-compose exec"
 alias dup="docker-compose up -d"
@@ -21,8 +22,8 @@ alias sudo="sudo "
 alias tinker="docker-compose exec app php artisan tinker"
 
 # directories
-alias lsa='exa -lagH --group-directories-first --icons'
-alias l='exa -lagH --group-directories-first --icons'
-alias ll='exa -lgH --group-directories-first --icons'
-alias la='exa -lAgH --group-directories-first --icons'
-alias ldir='exa -lgDH --git --icons'
+alias lsa="exa -lagH --group-directories-first --icons"
+alias l="exa -lagH --group-directories-first --icons"
+alias ll="exa -lgH --group-directories-first --icons"
+alias la="exa -lAgH --group-directories-first --icons"
+alias ldir="exa -lgDH --git --icons"
