@@ -76,7 +76,9 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git encode64 sudo fzf extract safe-paste docker zsh-syntax-highlighting)
+plugins=(git encode64 sudo fzf safe-paste docker zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
 
 # Kitty Terminal
 if [[ -f `which kitty` ]]; then
@@ -101,8 +103,6 @@ else
   export EDITOR='nvim'
 fi
 
-source $ZSH/oh-my-zsh.sh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -117,7 +117,9 @@ PROFILE=$HOME/.config/zsh/profile.zsh
 ALIASES=$HOME/.config/zsh/aliases.zsh
 [[ -f $ALIASES ]] && source $ALIASES
 
+# workaround for neovim crash: too many open files
+ulimit -n 10240
+
 # nvm
 # NVM=/usr/share/nvm/init-nvm.sh
 # [[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
-
