@@ -7,9 +7,6 @@ export PATH=$HOME/.config/composer/vendor/bin:$PATH
 # local
 export PATH=$HOME/.local/bin:$PATH
 
-# Flutter
-# export PATH=/opt/flutter/bin:$PATH
-
 # ruby
 export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 
