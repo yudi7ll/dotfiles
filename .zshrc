@@ -123,3 +123,10 @@ ulimit -n 10240
 # nvm
 # NVM=/usr/share/nvm/init-nvm.sh
 # [[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
+
+# bun completions
+[ -s "/home/yudi/.bun/_bun" ] && source "/home/yudi/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

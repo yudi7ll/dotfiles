@@ -17,6 +17,7 @@ alias paru="paru --removemake --sudoloop --bottomup --skipreview"
 alias s="pacman -Ss"
 alias sail="./vendor/bin/sail"
 alias sd="sudo systemctl"
+alias saul=sail
 alias serve="php artisan serve --host 0.0.0.0 &>/dev/null"
 alias si="sudo pacman -S"
 alias sudo="sudo "
