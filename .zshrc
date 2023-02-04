@@ -85,7 +85,7 @@ if [[ -f `which kitty` ]]; then
   autoload -Uz compinit
   compinit
   # Completion for kitty
-  kitty + complete setup zsh | source /dev/stdin
+  # kitty + complete setup zsh | source /dev/stdin
 fi
 
 # ignore all duplicated history
