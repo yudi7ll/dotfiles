@@ -22,12 +22,13 @@ export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_mo
 # Android
 export ANDROID_SDK=$HOME/Android/Sdk
 export PATH=$HOME/Android/Sdk/platform-tools:$PATH
+export PATH=$HOME/Android/Sdk/tools:$PATH
 
 # TMP
 export TMPDIR="/tmp"
 
 # Java Application 
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel ${_JAVA_OPTIONS}"
+# export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel ${_JAVA_OPTIONS}"
 export JAVA_HOME=/usr/lib/jvm/default
 export JAVA_FONTS=/usr/share/fonts/TTF
 
