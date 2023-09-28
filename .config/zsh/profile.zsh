@@ -34,3 +34,6 @@ export JAVA_FONTS=/usr/share/fonts/TTF
 
 # GPG
 export GPG_TTY=$(tty)
+
+# Homebrew
+export PATH=/opt/homebrew/bin:$PATH
