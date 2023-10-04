@@ -23,6 +23,14 @@ alias si="sudo pacman -S"
 alias sudo="sudo "
 alias tinker="docker-compose exec app php artisan tinker"
 
+# npm
+alias np="npm"
+alias npr="npm run"
+alias npd="npm run dev"
+alias npb="npm run build"
+alias nps="npm start"
+alias npsl="npm run start:local"
+
 # directories
 alias lsa="exa -lagH --group-directories-first --icons"
 alias l="exa -lagH --group-directories-first --icons"
