@@ -32,13 +32,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -85,7 +85,7 @@ if [[ -f `which kitty` ]]; then
   autoload -Uz compinit
   compinit
   # Completion for kitty
-  # kitty + complete setup zsh | source /dev/stdin
+  kitty + complete setup zsh | source /dev/stdin
 fi
 
 # ignore all duplicated history
@@ -118,11 +118,11 @@ ALIASES=$HOME/.config/zsh/aliases.zsh
 [[ -f $ALIASES ]] && source $ALIASES
 
 # workaround for neovim crash: too many open files
-ulimit -n 10240
+# ulimit -n 10240
 
 # nvm
-# NVM=/usr/share/nvm/init-nvm.sh
-# [[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
+NVM=/usr/share/nvm/init-nvm.sh
+[[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
 
 # bun completions
 [ -s "/home/yudi/.bun/_bun" ] && source "/home/yudi/.bun/_bun"
