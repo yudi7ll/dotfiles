@@ -56,6 +56,10 @@ return {
 		{ key = "j", mods = "SUPER", action = act.ActivatePaneDirection("Down") },
 		{ key = "k", mods = "SUPER", action = act.ActivatePaneDirection("Up") },
 		{ key = "l", mods = "SUPER", action = act.ActivatePaneDirection("Right") },
-		-- {key = 'l', mods = 'META', action = act.EmitEvent('Next')}
+		{ key = "U", mods = "CTRL", action = act.ScrollByPage(-1) },
+		{ key = "D", mods = "CTRL", action = act.ScrollByPage(1) },
+		{ key = "K", mods = "CTRL", action = act.ScrollByLine(-1) },
+		{ key = "J", mods = "CTRL", action = act.ScrollByLine(1) },
+		{ key = "f", mods = "SUPER", action = act.Search({ CaseInSensitiveString = "hash" }) },
 	},
 }
