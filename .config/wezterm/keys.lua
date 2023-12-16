@@ -29,37 +29,23 @@ return {
     keys = {
         {key = 'q', mods = 'SUPER', action = act.QuitApplication},
         {key = 'v', mods = 'SUPER', action = act.PasteFrom('Clipboard')},
-
+        {key = 'V', mods = 'CTRL', action = act.PasteFrom('Clipboard')},
         {key = 'r', mods = 'SUPER', action = act.ReloadConfiguration},
-    --     {key = 'z', mods = 'LEADER', action = act.TogglePaneZoomState},
-
         {key = 'F', mods = 'CTRL', action = act.EmitEvent('create_new_tab')},
-    --     {
-    --         key = 'x',
-    --         mods = 'LEADER',
-    --         action = act.CloseCurrentPane({confirm = true})
-    --     },
-        {key = '1', mods = 'SUPER', action = act.ActivateTab(0)},
-        {key = '2', mods = 'SUPER', action = act.ActivateTab(1)},
-        {key = '3', mods = 'SUPER', action = act.ActivateTab(2)},
-        {key = '4', mods = 'SUPER', action = act.ActivateTab(3)},
-        {key = '5', mods = 'SUPER', action = act.ActivateTab(4)},
-        {key = '6', mods = 'SUPER', action = act.ActivateTab(5)},
-        {key = '7', mods = 'SUPER', action = act.ActivateTab(6)},
-        {key = '8', mods = 'SUPER', action = act.ActivateTab(7)},
-        {key = '9', mods = 'SUPER', action = act.ActivateTab(8)},
-        {key = '0', mods = 'SUPER', action = act.ActivateTab(9)},
-
-        {
-            key = 'H',
-            mods = 'CTRL',
-            action = act.SplitHorizontal({domain = 'CurrentPaneDomain'})
-        },
-        {
-            key = 'V',
-            mods = 'CTRL',
-            action = act.SplitVertical({domain = 'CurrentPaneDomain'})
-        },
+        {key = 'l', mods = 'META', action = act.ActivateTabRelative(1)},
+        {key = 'h', mods = 'META', action = act.ActivateTabRelative(-1)},
+        {key = '1', mods = 'META', action = act.ActivateTab(0)},
+        {key = '2', mods = 'META', action = act.ActivateTab(1)},
+        {key = '3', mods = 'META', action = act.ActivateTab(2)},
+        {key = '4', mods = 'META', action = act.ActivateTab(3)},
+        {key = '5', mods = 'META', action = act.ActivateTab(4)},
+        {key = '6', mods = 'META', action = act.ActivateTab(5)},
+        {key = '7', mods = 'META', action = act.ActivateTab(6)},
+        {key = '8', mods = 'META', action = act.ActivateTab(7)},
+        {key = '9', mods = 'META', action = act.ActivateTab(8)},
+        {key = '0', mods = 'META', action = act.ActivateTab(9)},
+        {key = 'H', mods = 'CTRL', action = act.SplitHorizontal({domain = 'CurrentPaneDomain'})},
+        {key = 'L', mods = 'CTRL', action = act.SplitVertical({domain = 'CurrentPaneDomain'})},
         {key = 'h', mods = 'SUPER', action = act.EmitEvent('activate_pane_l')},
         {key = 'j', mods = 'SUPER', action = act.EmitEvent('activate_pane_d')},
         {key = 'k', mods = 'SUPER', action = act.EmitEvent('activate_pane_u')},

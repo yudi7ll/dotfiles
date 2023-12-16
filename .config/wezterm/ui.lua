@@ -48,7 +48,7 @@ return {
 	font = wezterm.font("JetBrains Mono"),
 	font_size = 13,
 	-- dpi = 144.0,
-	tab_max_width = 8,
+	tab_max_width = 6,
 	colors = {
 		tab_bar = {
 			-- The color of the inactive tab bar edge/divider
