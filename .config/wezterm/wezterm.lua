@@ -1,6 +1,6 @@
 local utils = require("utils")
 
-local keys = require("keys")
+local keymaps = require("keymaps")
 local ui = require("ui")
 
 local other_opts = {
@@ -8,4 +8,4 @@ local other_opts = {
 	-- macos_forward_to_ime_modifier_mask = 'SHIFT',
 	check_for_updates_interval_seconds = 30 * 24 * 60 * 60,
 }
-return utils.merge({ other_opts, keys, ui })
+return utils.merge({ other_opts, keymaps, ui })
