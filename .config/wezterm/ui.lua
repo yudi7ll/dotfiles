@@ -24,10 +24,6 @@ end
 
 local user_var_tab_title_key = "tab_title"
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	-- if there is title already set, proceed with it
-	-- if type(tab.tab_title) == 'string' and #tab.tab_title > 0 then
-	--     return format_title(tostring(tab.tab_index), tab.is_active, max_width)
-	-- end
 	return format_title(tostring((tab.tab_index + 1)), tab.is_active, max_width)
 end)
 

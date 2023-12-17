@@ -1,35 +1,6 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local function activate_pane(window, pane, pane_direction, vim_direction)
-	local isViProcess = pane:get_foreground_process_name():find("n?vim") ~= nil
-	if isViProcess then
-		window:perform_action( -- This should match the keybinds you set in Neovim.
-			act.SendKey({ key = vim_direction, mods = "CTRL" }),
-			pane
-		)
-	else
-		window:perform_action(act.ActivatePaneDirection(pane_direction), pane)
-	end
-end
-
-wezterm.on("activate_pane_r", function(window, pane)
-	activate_pane(window, pane, "Right", "l")
-end)
-wezterm.on("activate_pane_l", function(window, pane)
-	activate_pane(window, pane, "Left", "h")
-end)
-wezterm.on("activate_pane_u", function(window, pane)
-	activate_pane(window, pane, "Up", "k")
-end)
-wezterm.on("activate_pane_d", function(window, pane)
-	activate_pane(window, pane, "Down", "j")
-end)
-
-wezterm.on("create_new_tab", function(window, pane)
-	window:mux_window():spawn_tab({ cwd = wezterm.home })
-end)
-
 return {
 	disable_default_key_bindings = true,
 	keys = {
@@ -37,7 +8,7 @@ return {
 		{ key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
 		{ key = "V", mods = "CTRL", action = act.PasteFrom("Clipboard") },
 		{ key = "r", mods = "SUPER", action = act.ReloadConfiguration },
-		{ key = "F", mods = "CTRL", action = act.EmitEvent("create_new_tab") },
+		{ key = "F", mods = "CTRL", action = act.SpawnTab("DefaultDomain") },
 		{ key = "l", mods = "META", action = act.ActivateTabRelative(1) },
 		{ key = "h", mods = "META", action = act.ActivateTabRelative(-1) },
 		{ key = "1", mods = "META", action = act.ActivateTab(0) },
