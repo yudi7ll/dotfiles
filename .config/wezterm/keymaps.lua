@@ -5,6 +5,7 @@ return {
 	disable_default_key_bindings = true,
 	keys = {
 		{ key = "q", mods = "SUPER", action = act.QuitApplication },
+		{ key = "C", mods = "CTRL", action = act.CopyTo("ClipboardAndPrimarySelection") },
 		{ key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
 		{ key = "V", mods = "CTRL", action = act.PasteFrom("Clipboard") },
 		{ key = "r", mods = "SUPER", action = act.ReloadConfiguration },
