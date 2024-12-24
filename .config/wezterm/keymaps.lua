@@ -33,5 +33,10 @@ return {
 		{ key = "K", mods = "CTRL", action = act.ScrollByLine(-1) },
 		{ key = "J", mods = "CTRL", action = act.ScrollByLine(1) },
 		{ key = "f", mods = "SUPER", action = act.Search({ CaseInSensitiveString = "hash" }) },
+		{
+			key = "F5",
+			mods = "NONE",
+			action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }),
+		},
 	},
 }

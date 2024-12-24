@@ -1,4 +1,5 @@
 alias artisan="php artisan"
+alias c=cargo
 [[ -f `which bat` ]] && alias cat=bat 
 [[ -f `which batcat` ]] && alias cat=batcat
 alias copy=clipcopy
@@ -9,6 +10,8 @@ alias dup="docker-compose up -d"
 alias du="ncdu --color off"
 alias icat="kitty +kitten icat"
 alias mocp="mocp -T green_theme"
+alias nivm="nvim"
+alias nv="nvim"
 alias o='xdg-open &>/dev/null'
 alias open='xdg-open &>/dev/null'
 alias rm="trash"
@@ -18,9 +21,11 @@ alias s="pacman -Ss"
 alias sail="./vendor/bin/sail"
 alias sd="sudo systemctl"
 alias saul=sail
+alias sial=sail
 alias serve="php artisan serve --host 0.0.0.0 &>/dev/null"
 alias si="sudo pacman -S"
 alias sudo="sudo "
+alias sup="sail up -d"
 alias tinker="docker-compose exec app php artisan tinker"
 
 # npm
@@ -37,3 +42,8 @@ alias l="exa -lagH --group-directories-first --icons"
 alias ll="exa -lgH --group-directories-first --icons"
 alias la="exa -lAgH --group-directories-first --icons"
 alias ldir="exa -lgDH --git --icons"
+
+alias settlement-base="cd ~/Wallex/wallex/packages/wallex-settlement-base"
+alias nst="cd ~/Wallex/wallex/packages/wallex-settlement-base && nvim"
+alias nwc="cd ~/Wallex/wallex/packages/wallex-web && nvim"
+alias ncf="cd ~/.config/nvim && nvim"

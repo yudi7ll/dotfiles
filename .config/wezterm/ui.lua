@@ -27,10 +27,10 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	return format_title(tostring((tab.tab_index + 1)), tab.is_active, max_width)
 end)
 
-wezterm.on("update-right-status", function(window)
-	local date = wezterm.strftime("%Y-%m-%d %H:%M:%S")
-	window:set_right_status({ Foreground = { Color = "#cad3f5" } }, wezterm.format({ { Text = " " .. date .. " " } }))
-end)
+-- wezterm.on("update-right-status", function(window)
+-- 	local date = wezterm.strftime("%Y-%m-%d %H:%M:%S")
+-- 	window:set_right_status({ Foreground = { Color = "#cad3f5" } }, wezterm.format({ { Text = " " .. date .. " " } }))
+-- end)
 
 wezterm.on("user-var-changed", function(window, pane, name, value)
 	wezterm.log_info("user-var-changed", name, value)
@@ -42,8 +42,11 @@ end)
 return {
 	color_scheme = "3024 (dark) (terminal.sexy)",
 	front_end = "WebGpu",
-	font = wezterm.font("JetBrains Mono"),
-	font_size = 10,
+	font = wezterm.font({
+		family = "JetBrains Mono",
+		harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+	}),
+	font_size = 9.5,
 	-- dpi = 144.0,
 	tab_max_width = 6,
 	colors = {
@@ -66,7 +69,7 @@ return {
 		split = "#444444",
 	},
 	-- window_decorations = 'RESIZE',
-	-- window_background_opacity = 0.9,
+	window_background_opacity = 0.97,
 	tab_bar_at_bottom = true,
 	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
