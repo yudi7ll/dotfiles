@@ -34,3 +34,5 @@ export AWS_SDK_LOAD_CONFIG=1
 export AWS_PROFILE=wallex-dev
 
 export GTK_THEME=Colloid-Dark
+
+export TMPDIR=/tmp

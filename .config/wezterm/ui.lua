@@ -40,7 +40,7 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 end)
 
 return {
-	color_scheme = "3024 (dark) (terminal.sexy)",
+	color_scheme = "Bamboo",
 	front_end = "WebGpu",
 	font = wezterm.font({
 		family = "JetBrains Mono",
