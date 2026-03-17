@@ -1,8 +1,9 @@
 # yarn global
 export PATH=$HOME/.yarn/bin:$PATH
 
-# composer vendor
+# composer
 export PATH=$HOME/.config/composer/vendor/bin:$PATH
+export COMPOSER_PROCESS_TIMEOUT=2000
 
 # local
 export PATH=$HOME/.local/bin:$PATH
