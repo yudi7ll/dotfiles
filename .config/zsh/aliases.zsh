@@ -39,6 +39,7 @@ alias nps="npm start"
 alias npsl="npm run start:local"
 
 # directories
+[[ -f `which eza` ]] && alias exa=eza
 alias lsa="exa -lagH --group-directories-first --icons"
 alias l="exa -lagH --group-directories-first --icons"
 alias ll="exa -lgH --group-directories-first --icons"

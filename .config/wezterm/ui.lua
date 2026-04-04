@@ -1,5 +1,27 @@
 local wezterm = require("wezterm")
 
+local is_mac = wezterm.target_triple:find("darwin") ~= nil
+
+local font_config = wezterm.font({
+	family = "JetBrains Mono",
+	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+})
+
+local platform_config = {}
+if is_mac then
+	platform_config = {
+		font = font_config,
+		font_size = 13,
+		dpi = 144.0,
+		macos_window_background_blur = 40,
+	}
+else
+	platform_config = {
+		font = font_config,
+		font_size = 9.5,
+	}
+end
+
 local format_title = function(title, is_active, max_width)
 	local title_len = #title
 	local pad_len = math.floor((max_width - title_len) / 2)
@@ -39,15 +61,9 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	end
 end)
 
-return {
+local config = {
 	color_scheme = "3024 (dark) (terminal.sexy)",
 	front_end = "WebGpu",
-	font = wezterm.font({
-		family = "JetBrains Mono",
-		harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
-	}),
-	font_size = 9.5,
-	-- dpi = 144.0,
 	tab_max_width = 6,
 	colors = {
 		tab_bar = {
@@ -68,10 +84,8 @@ return {
 		scrollbar_thumb = "#16161d",
 		split = "#444444",
 	},
-	window_decorations = "RESIZE",
-	window_background_opacity = 0.95,
 	window_background_image = os.getenv("HOME") .. "/.config/wezterm/bg/background.png",
-	macos_window_background_blur = 40,
+	window_background_opacity = 0.95,
 	tab_bar_at_bottom = true,
 	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
@@ -85,3 +99,10 @@ return {
 	initial_cols = 134,
 	enable_wayland = false,
 }
+
+-- Merge platform-specific settings
+for k, v in pairs(platform_config) do
+	config[k] = v
+end
+
+return config

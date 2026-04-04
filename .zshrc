@@ -35,7 +35,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=13
@@ -81,9 +81,7 @@ plugins=(git encode64 sudo fzf safe-paste docker zsh-syntax-highlighting colored
 source $ZSH/oh-my-zsh.sh
 
 # Kitty Terminal
-if [[ -f `which kitty` ]]; then
-  autoload -Uz compinit
-  compinit
+if command -v kitty &>/dev/null; then
   # Completion for kitty
   kitty + complete setup zsh | source /dev/stdin
 fi
@@ -99,6 +97,7 @@ export LANG=en_US.UTF-8
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
+  export TERM=xterm-256color
 else
   export EDITOR='nvim'
 fi
@@ -107,7 +106,11 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Compilation flags
-export ARCHFLAGS="-arch x86_64"
+if [[ "$(uname -m)" == "arm64" ]]; then
+  export ARCHFLAGS="-arch arm64"
+else
+  export ARCHFLAGS="-arch x86_64"
+fi
 
 # profile
 PROFILE=$HOME/.config/zsh/profile.zsh
@@ -117,6 +120,13 @@ PROFILE=$HOME/.config/zsh/profile.zsh
 ALIASES=$HOME/.config/zsh/aliases.zsh
 [[ -f $ALIASES ]] && source $ALIASES
 
+# OS detection
+if [[ "$(uname)" == "Darwin" ]]; then
+  export PLATFORM="macos"
+elif [[ "$(uname)" == "Linux" ]]; then
+  export PLATFORM="linux"
+fi
+
 # workaround for neovim crash: too many open files
 # ulimit -n 10240
 
@@ -124,12 +134,19 @@ ALIASES=$HOME/.config/zsh/aliases.zsh
 NVM=/usr/share/nvm/init-nvm.sh
 [[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
 
-# bun completions
-[ -s "/home/yudi/.bun/_bun" ] && source "/home/yudi/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "$BUN_INSTALL/bin/bun" ] && source <("$BUN_INSTALL/bin/bun completions")
 export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+if [[ -d $PYENV_ROOT/bin ]]; then
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init - zsh)"
+fi
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/yudi/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
