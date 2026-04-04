@@ -76,9 +76,16 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git encode64 sudo fzf safe-paste docker zsh-syntax-highlighting colored-man-pages extract universalarchive urltools)
+plugins=(git encode64 sudo fzf safe-paste docker colored-man-pages extract universalarchive urltools)
 
 source $ZSH/oh-my-zsh.sh
+
+# zsh-syntax-highlighting — dynamic path per OS (brew on Mac, system on Linux)
+if [[ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+  source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+elif [[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+  source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 
 # Kitty Terminal
 if command -v kitty &>/dev/null; then
@@ -150,3 +157,14 @@ fpath=(/Users/yudi/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+# autoload .nvmrc using n
+autoload -U add-zsh-hook                                                                                                                                     
+_use_nvmrc() {                                                                                                                                               
+  if [[ -f .nvmrc ]]; then                                                                                                                                   
+    n $(cat .nvmrc)                                                                                                                                          
+  fi                                                                                                                                                         
+}                                                                                                                                                            
+add-zsh-hook chpwd _use_nvmrc                                                                                                                                
+_use_nvmrc  # trigger on initial cd                                                                                                                          
+# end of the autoload .nvmrc using n
