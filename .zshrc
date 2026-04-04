@@ -159,15 +159,15 @@ compinit
 # End of Docker CLI completions
 
 # autoload .nvmrc using n
-autoload -U add-zsh-hook                                                                                                                                     
-_use_nvmrc() {
-  if [[ -f .nvmrc ]]; then
-    local needed=$(cat .nvmrc)
-    local current=$(node --version | tr -d 'v')
-    [[ "$current" == "$needed" ]] && return
-    n "$needed"
-  fi
-}                                                                                                                                                            
-add-zsh-hook chpwd _use_nvmrc                                                                                                                                
-_use_nvmrc  # trigger on initial cd                                                                                                                          
+# autoload -U add-zsh-hook                                                                                                                                     
+# _use_nvmrc() {
+#   if [[ -f .nvmrc ]]; then
+#     local needed=$(cat .nvmrc)
+#     local current=$(node --version | tr -d 'v')
+#     [[ "$current" == "$needed" ]] && return
+#     n "$needed" 2>/dev/null >/dev/null
+#   fi
+# }                                                                                                                                                            
+# add-zsh-hook chpwd _use_nvmrc                                                                                                                                
+# _use_nvmrc  # trigger on initial cd                                                                                                                          
 # end of the autoload .nvmrc using n
