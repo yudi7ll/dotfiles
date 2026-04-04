@@ -150,8 +150,12 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 if [[ -d $PYENV_ROOT/bin ]]; then
   export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init - zsh)"
 fi
+eval "$(pyenv init - zsh)"
+
+# Add .NET Core SDK tools
+export PATH="$HOME/.dotnet/tools:$PATH"
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/yudi/.docker/completions $fpath)
 autoload -Uz compinit

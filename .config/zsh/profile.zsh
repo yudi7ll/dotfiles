@@ -37,3 +37,13 @@ export AWS_PROFILE=wallex-dev
 export GTK_THEME=Colloid-Dark
 
 export TMPDIR=/tmp
+
+# Ollama
+export OLLAMA_API_BASE=http://localhost:7869
+
+# chrome lag fix
+# export NVD_BACKEND=direct
+# export MOZ_ENABLE_WAYLAND=1
+export LIBVA_DRIVER_NAME=nvidia
+export MOZ_ENABLE_WAYLAND=1
+export EGL_PLATFORM=wayland

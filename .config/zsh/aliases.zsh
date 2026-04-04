@@ -5,6 +5,7 @@ alias c=cargo
 alias copy=clipcopy
 alias drun='docker run -ti --rm -v $PWD:/app -w /app'
 alias d="docker compose"
+alias df="dysk"
 alias dx="docker compose exec"
 alias dup="docker compose up -d"
 alias du="ncdu --color off"
@@ -29,6 +30,7 @@ alias si="sudo pacman -S"
 alias sudo="sudo "
 alias sup="sail up -d"
 alias tinker="docker compose exec app php artisan tinker"
+alias wninja="cd ~/Wallex/wallex-ninja"
 
 # npm
 alias np="npm"
@@ -50,3 +52,8 @@ alias settlement-base="cd ~/Wallex/wallex/packages/wallex-settlement-base"
 alias nst="cd ~/Wallex/wallex/packages/wallex-settlement-base"
 alias nwc="cd ~/Wallex/wallex/packages/wallex-web"
 alias ncf="cd ~/.config/nvim"
+
+# aider (AI coding assistant with Ollama)
+alias ai='aider --model ollama_chat/qwen2.5-coder-32b-instruct-q4_k_m'
+alias ai-light='aider --model ollama_chat/qwen3.5:9b'
+alias ai-reason='aider --model ollama_chat/qwen3.5:35b'
