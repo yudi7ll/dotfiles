@@ -160,10 +160,13 @@ compinit
 
 # autoload .nvmrc using n
 autoload -U add-zsh-hook                                                                                                                                     
-_use_nvmrc() {                                                                                                                                               
-  if [[ -f .nvmrc ]]; then                                                                                                                                   
-    n $(cat .nvmrc)                                                                                                                                          
-  fi                                                                                                                                                         
+_use_nvmrc() {
+  if [[ -f .nvmrc ]]; then
+    local needed=$(cat .nvmrc)
+    local current=$(node --version | tr -d 'v')
+    [[ "$current" == "$needed" ]] && return
+    n "$needed"
+  fi
 }                                                                                                                                                            
 add-zsh-hook chpwd _use_nvmrc                                                                                                                                
 _use_nvmrc  # trigger on initial cd                                                                                                                          
