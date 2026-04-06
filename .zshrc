@@ -141,12 +141,6 @@ fi
 NVM=/usr/share/nvm/init-nvm.sh
 [[ -f $NVM ]] && source /usr/share/nvm/init-nvm.sh
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# bun completions
-[ -s "$BUN_INSTALL/bin/bun" ] && source <("$BUN_INSTALL/bin/bun completions")
 export PYENV_ROOT="$HOME/.pyenv"
 if [[ -d $PYENV_ROOT/bin ]]; then
   export PATH="$PYENV_ROOT/bin:$PATH"
@@ -175,3 +169,16 @@ compinit
 # add-zsh-hook chpwd _use_nvmrc                                                                                                                                
 # _use_nvmrc  # trigger on initial cd                                                                                                                          
 # end of the autoload .nvmrc using n
+
+# Claude Code: Auto-switch between Wallex and Personal APIs
+claude() {
+  if [[ "$PWD" == *[Ww]allex* ]]; then
+    echo "--- Wallex API Activated ---"
+    command claude --settings ~/.claude/settings.wallex.json "$@"
+  else
+    echo "--- Personal API Activated ---"
+    command claude "$@"
+  fi
+}
+
+
