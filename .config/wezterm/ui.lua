@@ -64,7 +64,11 @@ end)
 local config = {
 	color_scheme = "3024 (dark) (terminal.sexy)",
 	front_end = "WebGpu",
+	enable_wayland = false,
+	webgpu_power_preference = "HighPerformance",
+	dpi = nil,
 	tab_max_width = 6,
+	-- window_decorations = "RESIZE",
 	colors = {
 		tab_bar = {
 			-- The color of the inactive tab bar edge/divider
@@ -97,7 +101,6 @@ local config = {
 	},
 	initial_rows = 34,
 	initial_cols = 134,
-	enable_wayland = false,
 }
 
 -- Merge platform-specific settings

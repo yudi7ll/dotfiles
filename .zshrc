@@ -76,7 +76,7 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git encode64 sudo fzf safe-paste docker colored-man-pages extract universalarchive urltools)
+plugins=(git gitfast encode64 sudo fzf safe-paste docker colored-man-pages extract universalarchive urltools aliases gitignore systemd z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -134,6 +134,10 @@ elif [[ "$(uname)" == "Linux" ]]; then
   export PLATFORM="linux"
 fi
 
+if [[ -f ~/.zshenv ]]; then
+  source ~/.zshenv
+fi
+
 # workaround for neovim crash: too many open files
 # ulimit -n 10240
 
@@ -170,15 +174,32 @@ compinit
 # _use_nvmrc  # trigger on initial cd                                                                                                                          
 # end of the autoload .nvmrc using n
 
-# Claude Code: Auto-switch between Wallex and Personal APIs
+# Claude Code: Auto-switch between APIs based on directory
+# Wallex dir → wallex settings, Local flag → local-llm settings, else → default (openrouter)
 claude() {
-  if [[ "$PWD" == *[Ww]allex* ]]; then
+  local use_wallex=true
+  local args=()
+
+  for arg in "$@"; do
+    if [[ "$arg" == "--no-wallex" ]]; then
+      use_wallex=false
+    else
+      args+=("$arg")
+    fi
+  done
+
+  if [[ "$PWD" == *[Ww]allex* && "$use_wallex" == true ]]; then
     echo "--- Wallex API Activated ---"
-    command claude --settings ~/.claude/settings.wallex.json "$@"
+    command claude --settings ~/.claude/settings.wallex.json "${args[@]}"
   else
-    echo "--- Personal API Activated ---"
-    command claude "$@"
+    echo "--- OpenRouter API Activated ---"
+    command claude "${args[@]}"
   fi
 }
 
+# OpenClaw Completion
+source "/home/yudi/.openclaw/completions/openclaw.zsh"
 
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/yudi/.lmstudio/bin"
+# End of LM Studio CLI section

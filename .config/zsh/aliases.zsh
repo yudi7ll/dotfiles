@@ -22,6 +22,7 @@ alias p="sudo pacman"
 alias paru="paru --removemake --sudoloop --bottomup --skipreview"
 alias s="pacman -Ss"
 alias sail="./vendor/bin/sail"
+alias sc="systemctl"
 alias sd="sudo systemctl"
 alias saul=sail
 alias sial=sail
@@ -42,18 +43,12 @@ alias npsl="npm run start:local"
 
 # directories
 [[ -f `which eza` ]] && alias exa=eza
-alias lsa="exa -lagH --group-directories-first --icons"
-alias l="exa -lagH --group-directories-first --icons"
-alias ll="exa -lgH --group-directories-first --icons"
-alias la="exa -lAgH --group-directories-first --icons"
-alias ldir="exa -lgDH --git --icons"
+alias lsa="exa -lagH --group-directories-first --icons auto"
+alias l="exa -lagH --group-directories-first --icons auto"
+alias ll="exa -lgH --group-directories-first --icons auto"
+alias la="exa -lAgH --group-directories-first --icons auto"
+alias ldir="exa -lgDH --git --icons auto"
 
-alias settlement-base="cd ~/Wallex/wallex/packages/wallex-settlement-base"
-alias nst="cd ~/Wallex/wallex/packages/wallex-settlement-base"
-alias nwc="cd ~/Wallex/wallex/packages/wallex-web"
-alias ncf="cd ~/.config/nvim"
-
-# aider (AI coding assistant with Ollama)
-alias ai='aider --model ollama_chat/qwen2.5-coder-32b-instruct-q4_k_m'
-alias ai-light='aider --model ollama_chat/qwen3.5:9b'
-alias ai-reason='aider --model ollama_chat/qwen3.5:35b'
+# claude
+alias cl=claude
+alias cll="claude --settings ~/.claude/settings.local-llm.json"
