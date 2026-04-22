@@ -149,7 +149,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 if [[ -d $PYENV_ROOT/bin ]]; then
   export PATH="$PYENV_ROOT/bin:$PATH"
 fi
-eval "$(pyenv init - zsh)"
+if command -v pyenv &>/dev/null; then
+  eval "$(pyenv init - zsh)"
+fi
 
 # Add .NET Core SDK tools
 export PATH="$HOME/.dotnet/tools:$PATH"
@@ -198,7 +200,9 @@ claude() {
 }
 
 # OpenClaw Completion
-source "/home/yudi/.openclaw/completions/openclaw.zsh"
+if [[ -f "/home/yudi/.openclaw/completions/openclaw.zsh" ]]; then
+  source "/home/yudi/.openclaw/completions/openclaw.zsh"
+fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/yudi/.lmstudio/bin"
