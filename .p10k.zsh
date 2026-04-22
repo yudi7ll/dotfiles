@@ -1556,7 +1556,7 @@
   function prompt_screen() {
     if [[ -n $STY ]]; then
       local session=${STY%%.*}
-      p10k segment -f 110 -i '󱂬' -t "${session:-screen}"
+      p10k segment -f 246 -i '󱂬' -t "${session:-screen}"
       return
     fi
 
@@ -1564,7 +1564,7 @@
     local count
     count=$(screen -ls 2>/dev/null | grep -c '[0-9]\+\.')
     (( count > 0 )) || return
-    p10k segment -f 178 -i '󱂬' -t "${count} bg"
+    p10k segment -f 245 -i '󱂬' -t "${count} bg"
   }
 
   function instant_prompt_screen() {
