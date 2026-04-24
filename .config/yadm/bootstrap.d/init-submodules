@@ -1,8 +1,0 @@
-#!/bin/sh
-
-cd "$HOME"
-
-echo "Init submodules"
-yadm submodule update --recursive --init
-git clone https://github.com/yudi7ll/nvim-config ~/.config/nvim
-cd ~/.config/nvim && git checkout main

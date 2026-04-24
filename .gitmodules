@@ -1,6 +1,6 @@
-[submodule ".config/oh-my-zsh/plugins/zsh-syntax-highlighting"]
-	path = .config/oh-my-zsh/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".config/oh-my-zsh/themes/powerlevel10k"]
-	path = .config/oh-my-zsh/themes/powerlevel10k
+[submodule "files/.config/oh-my-zsh/themes/powerlevel10k"]
+	path = files/.config/oh-my-zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "files/.config/oh-my-zsh/plugins/zsh-syntax-highlighting"]
+	path = files/.config/oh-my-zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

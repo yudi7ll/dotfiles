@@ -76,16 +76,9 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast encode64 sudo fzf safe-paste docker colored-man-pages extract universalarchive urltools aliases gitignore systemd z)
+plugins=(git gitfast encode64 sudo fzf safe-paste docker colored-man-pages extract universalarchive urltools aliases gitignore systemd z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
-# zsh-syntax-highlighting — dynamic path per OS (brew on Mac, system on Linux)
-if [[ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
-  source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-elif [[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
-  source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-fi
 
 # Kitty Terminal
 if command -v kitty &>/dev/null; then
@@ -162,22 +155,7 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-# autoload .nvmrc using n
-# autoload -U add-zsh-hook                                                                                                                                     
-# _use_nvmrc() {
-#   if [[ -f .nvmrc ]]; then
-#     local needed=$(cat .nvmrc)
-#     local current=$(node --version | tr -d 'v')
-#     [[ "$current" == "$needed" ]] && return
-#     n "$needed" 2>/dev/null >/dev/null
-#   fi
-# }                                                                                                                                                            
-# add-zsh-hook chpwd _use_nvmrc                                                                                                                                
-# _use_nvmrc  # trigger on initial cd                                                                                                                          
-# end of the autoload .nvmrc using n
-
 # Claude Code: Auto-switch between APIs based on directory
-# Wallex dir → wallex settings, Local flag → local-llm settings, else → default (openrouter)
 claude() {
   local use_wallex=true
   local args=()
@@ -198,11 +176,6 @@ claude() {
     command claude "${args[@]}"
   fi
 }
-
-# OpenClaw Completion
-if [[ -f "/home/yudi/.openclaw/completions/openclaw.zsh" ]]; then
-  source "/home/yudi/.openclaw/completions/openclaw.zsh"
-fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/yudi/.lmstudio/bin"
