@@ -3,12 +3,7 @@ alias c=cargo
 [[ -f `which bat` ]] && alias cat=bat 
 [[ -f `which batcat` ]] && alias cat=batcat
 alias copy=clipcopy
-alias drun='docker run -ti --rm -v $PWD:/app -w /app'
-alias d="docker compose"
 alias df="dysk"
-alias dx="docker compose exec"
-alias dup="docker compose up -d"
-alias du="ncdu --color off"
 alias icat="kitty +kitten icat"
 alias mocp="mocp -T green_theme"
 alias nivm="nvim"
@@ -30,8 +25,6 @@ alias serve="php artisan serve --host 0.0.0.0 &>/dev/null"
 alias si="sudo pacman -S"
 alias sudo="sudo "
 alias sup="sail up -d"
-alias tinker="docker compose exec app php artisan tinker"
-alias wninja="cd ~/Wallex/wallex-ninja"
 
 # npm
 alias np="npm"
@@ -52,3 +45,12 @@ alias ldir="exa -lgDH --git --icons auto"
 # claude
 alias cl=claude
 alias cll="claude --settings ~/.claude/settings.local-llm.json"
+
+# docker 
+alias drun='docker run -ti --rm -v $PWD:/app -w /app'
+alias d="docker compose"
+alias dps="docker ps --format \"table {{.Names}}\t{{.Status}}\t{{.Ports}}\""
+alias dup="docker compose up -d"
+alias du="ncdu --color off"
+alias dx="docker compose exec"
+alias tinker="docker compose exec app php artisan tinker"

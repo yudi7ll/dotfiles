@@ -64,8 +64,8 @@ end)
 local config = {
 	color_scheme = "3024 (dark) (terminal.sexy)",
 	front_end = "WebGpu",
-	enable_wayland = false,
-	webgpu_power_preference = "HighPerformance",
+	enable_wayland = true,
+	-- webgpu_power_preference = "HighPerformance",
 	dpi = nil,
 	tab_max_width = 6,
 	-- window_decorations = "RESIZE",
@@ -96,7 +96,7 @@ local config = {
 	window_padding = {
 		left = 0,
 		right = 0,
-		top = 0,
+		top = 4,
 		bottom = 0,
 	},
 	initial_rows = 34,
