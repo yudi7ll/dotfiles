@@ -76,7 +76,7 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast encode64 sudo fzf safe-paste docker colored-man-pages extract universalarchive urltools aliases gitignore systemd z zsh-syntax-highlighting)
+plugins=(git encode64 sudo fzf safe-paste docker colored-man-pages extract universalarchive urltools aliases gitignore systemd z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

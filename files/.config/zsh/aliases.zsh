@@ -54,3 +54,5 @@ alias dup="docker compose up -d"
 alias du="ncdu --color off"
 alias dx="docker compose exec"
 alias tinker="docker compose exec app php artisan tinker"
+
+alias t=tmux
