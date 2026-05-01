@@ -1,5 +1,4 @@
 alias artisan="php artisan"
-alias c=cargo
 [[ -f `which bat` ]] && alias cat=bat 
 [[ -f `which batcat` ]] && alias cat=batcat
 alias copy=clipcopy
@@ -7,12 +6,10 @@ alias df="dysk"
 alias icat="kitty +kitten icat"
 alias mocp="mocp -T green_theme"
 alias nivm="nvim"
-alias nv="nvim"
 alias v="nvim"
 alias o='xdg-open &>/dev/null'
 alias occ='./bin/occ'
 alias open='xdg-open &>/dev/null'
-alias rm="trash"
 alias p="sudo pacman"
 alias paru="paru --removemake --sudoloop --bottomup --skipreview"
 alias s="pacman -Ss"
@@ -56,3 +53,6 @@ alias dx="docker compose exec"
 alias tinker="docker compose exec app php artisan tinker"
 
 alias t=tmux
+
+# git
+alias ghash='git rev-parse HEAD'

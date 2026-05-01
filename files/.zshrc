@@ -120,6 +120,10 @@ PROFILE=$HOME/.config/zsh/profile.zsh
 ALIASES=$HOME/.config/zsh/aliases.zsh
 [[ -f $ALIASES ]] && source $ALIASES
 
+# functions
+FUNCTIONS=$HOME/.config/zsh/functions.zsh
+[[ -f $FUNCTIONS ]] && source $FUNCTIONS
+
 # OS detection
 if [[ "$(uname)" == "Darwin" ]]; then
   export PLATFORM="macos"

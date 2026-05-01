@@ -16,8 +16,8 @@ help:
 	@echo "Dotfiles Management Makefile"
 	@echo ""
 	@echo "Usage:"
-	@echo "  make install            Install all dotfiles using stow"
-	@echo "  make update             Update all dotfiles using stow"
+	@echo "  make install            Install all dotfiles using stow and initialize submodules"
+	@echo "  make update             Update all dotfiles using stow and update submodules"
 	@echo "  make clean              Remove all dotfiles symlinks"
 	@echo "  make status             Show stow status"
 	@echo "  make submodule-init     Initialize and clone all submodules"
@@ -40,9 +40,15 @@ install:
 	@echo -e "$(BLUE)Installing all dotfiles...$(NC)"
 	stow --dir=$(STOW_DIR) --target=$(HOME) --verbose .
 	@echo -e "$(GREEN)All dotfiles installed successfully!$(NC)"
+	@echo -e ""
+	@echo -e "$(BLUE)Updating submodules to latest versions...$(NC)"
+	make submodule-update
 
-# Update all dotfiles (restow)
+# Update all dotfiles (restow) and submodules
 update:
+	@echo -e "$(BLUE)Updating submodules...$(NC)"
+	git submodule update --remote --merge
+	@echo -e "$(GREEN)Submodules updated successfully!$(NC)"
 	@echo -e "$(BLUE)Updating all dotfiles...$(NC)"
 	stow --dir=$(STOW_DIR) --target=$(HOME) --restow .
 	@echo -e "$(GREEN)All dotfiles updated successfully!$(NC)"
