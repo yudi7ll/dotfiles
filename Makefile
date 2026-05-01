@@ -33,6 +33,10 @@ help:
 
 # Install all dotfiles
 install:
+	@echo -e "$(BLUE)Installing all submodules...$(NC)"
+	make submodule-init
+	@echo -e "$(GREEN)All submodules installed successfully!$(NC)"
+	@echo -e ""
 	@echo -e "$(BLUE)Installing all dotfiles...$(NC)"
 	stow --dir=$(STOW_DIR) --target=$(HOME) --verbose .
 	@echo -e "$(GREEN)All dotfiles installed successfully!$(NC)"

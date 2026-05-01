@@ -1,3 +1,2 @@
 !.nvim.lua
-files/.config/oh-my-zsh/themes/powerlevel10k/*
-files/.config/oh-my-zsh/plugins/zsh-syntax-highlighting/*
+!files/.claude
