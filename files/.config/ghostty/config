@@ -1,0 +1,32 @@
+# Ghostty configuration
+# Add your custom settings below
+
+# Example: Set the font (modify to your preferred font and size)
+# font = FiraCode NFP 12
+
+# Example: Set the theme (modify to your preferred theme)
+# theme = dark
+
+# Example: Set the background opacity (0.0 to 1.0)
+# background-opacity = 0.9
+
+# Example: Set the cursor style
+# cursor-style = block
+
+# Example: Set the scrollback lines
+# scrollback-lines = 10000
+
+# Example: Enable bell notifications
+# bell-command = "notify-send 'Ghostty' 'Bell in session %session'"
+
+# Example: Set the window title format
+# window-title = "Ghostty: %session"
+
+# Example: Set the initial window size (columns x rows)
+# initial-cols = 120
+# initial-rows = 40
+
+# Example: Set the color palette (if not using a theme)
+# palette = "#000000:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+
+# Uncomment and adjust any of the above lines to customize your Ghostty terminal.

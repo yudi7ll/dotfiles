@@ -30,11 +30,14 @@ export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_mo
 # export JAVA_HOME=/usr/lib/jvm/default
 # export JAVA_FONTS=/usr/share/fonts/TTF
 
+# fix rider HiDPI
+export _JAVA_OPTIONS="-Dsun.java2d.uiScale.enabled=true"
+
 # AWS
 export AWS_SDK_LOAD_CONFIG=1
 export AWS_PROFILE=wallex-dev
 
-export GTK_THEME=Colloid-Dark
+# export GTK_THEME=Colloid-Dark
 
 export TMPDIR=/tmp
 
