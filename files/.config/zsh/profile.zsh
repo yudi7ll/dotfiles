@@ -37,7 +37,7 @@ export _JAVA_OPTIONS="-Dsun.java2d.uiScale.enabled=true"
 export AWS_SDK_LOAD_CONFIG=1
 export AWS_PROFILE=wallex-dev
 
-# export GTK_THEME=Colloid-Dark
+export GTK_THEME=Colloid-Dark-Compact
 
 export TMPDIR=/tmp
 
@@ -50,3 +50,10 @@ export OLLAMA_API_BASE=http://localhost:7869
 export LIBVA_DRIVER_NAME=nvidia
 export MOZ_ENABLE_WAYLAND=1
 export EGL_PLATFORM=wayland
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/yudi/.lmstudio/bin"
+# End of LM Studio CLI section
+
+# Mason.nvim
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
